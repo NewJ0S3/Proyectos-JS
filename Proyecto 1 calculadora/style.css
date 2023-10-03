@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background: linear-gradient(50deg, rgb(0, 0, 0), #ffffff);
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.calculator {
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgb(0, 57, 245);
+    background-color: #fff;
+}
+
+#display {
+    color: #222;
+    margin: 0 10px;
+    height: 120px;
+    width: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+#clear {
+    background-color: blue;
+    color: #fffde7;
+}
+
+.btn-number {
+    background-color: rgb(29, 146, 255);
+    color: #fffde7;
+}
+
+.btn-operator {
+    background-color: rgb(85, 201, 255);
+    color: #fffde7;
+}
+
+.btn-equal {
+    background-color: rgb(0, 255, 200);
+    color: #fffde7;
+}
+
+.theme-toggler {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;
+    }
+
+.theme-toggler::before {
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #333;
+    z-index: -1;
+    
+}
+
+.theme-toggler .active {
+    color: #333;
+}
+
+.theme-toggler .active::before {
+    background-color: #fff;
+}
+
+button {
+    height: 60px;
+    width: 60px;
+    border: 0;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+#equal {
+    height: 130px;
+}
+
+/* black theme */
+
+.dark {
+    box-shadow: 0 0 30px rgb(41, 245, 0);
+    background-color: rgb(0, 0, 0);
+}
+
+.dark .theme-toggler::before {
+    background-color: #fff;
+}
+
+.dark #clear {
+    background-color: rgb(0, 255, 0);
+    color: #000000;
+}
+
+.dark .btn-number {
+    background-color: rgb(0, 255, 98);
+    color: #000000;
+}
+
+.dark .btn-operator {
+    background-color: rgb(206, 252, 0);
+    color: #000000;
+}
+
+.dark .btn-equal {
+    background-color: rgb(9, 255, 0);
+    color: #000000;
+}
+
+.dark #display {
+    color: #eee;
+}
